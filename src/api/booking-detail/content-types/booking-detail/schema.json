@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "booking_details",
+  "info": {
+    "singularName": "booking-detail",
+    "pluralName": "booking-details",
+    "displayName": "booking-detail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "booking_detail"
+    }
+  }
+}
